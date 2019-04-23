@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+    $nama = "OwO";
+    $data =['Informatika', 'Biologi', 'Industri', 'Fisika', 'Kimia'];
+    return view('home', ['prodi'=>$data], ['nama'=>$nama]);
 });
+Route::get('/mahasiswa', 'MahasiswaController@index');
